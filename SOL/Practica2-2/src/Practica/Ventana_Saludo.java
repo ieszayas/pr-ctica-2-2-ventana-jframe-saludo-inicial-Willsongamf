@@ -45,7 +45,7 @@ public class Ventana_Saludo extends javax.swing.JFrame {
             }
         });
 
-        Imagen_Saludo.setIcon(new javax.swing.ImageIcon("C:\\Users\\calvo\\OneDrive\\Documentos\\GitHub\\pr-ctica-2-2-ventana-jframe-saludo-inicial-Willsongamf\\media\\saluda.png")); // NOI18N
+        Imagen_Saludo.setIcon(new javax.swing.ImageIcon("C:\\Users\\DAM2_09\\Documents\\GitHub\\pr-ctica-2-2-ventana-jframe-saludo-inicial-Willsongamf\\SOL\\Practica2-2\\src\\Practica\\saluda.png")); // NOI18N
 
         Campo_Nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
