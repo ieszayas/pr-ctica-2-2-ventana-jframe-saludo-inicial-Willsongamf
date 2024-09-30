@@ -32,8 +32,6 @@ public class Ventana_Saludo extends javax.swing.JFrame {
         Boton_Confirmacion_Nombre = new javax.swing.JButton();
         Imagen_Saludo = new javax.swing.JLabel();
         Campo_Nombre = new javax.swing.JTextField();
-        Texto_Apellido = new javax.swing.JLabel();
-        Campo_Apellido = new javax.swing.JTextField();
         Texto_Nombre = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -53,14 +51,6 @@ public class Ventana_Saludo extends javax.swing.JFrame {
             }
         });
 
-        Texto_Apellido.setText("Introduzca su apellido");
-
-        Campo_Apellido.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Campo_ApellidoActionPerformed(evt);
-            }
-        });
-
         Texto_Nombre.setText("Introduzca su nombre");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -70,18 +60,16 @@ public class Ventana_Saludo extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(141, 141, 141)
-                        .addComponent(Boton_Confirmacion_Nombre))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(106, 106, 106)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Campo_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto_Apellido)
-                            .addComponent(Texto_Nombre)
-                            .addComponent(Campo_Apellido, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(Texto_Nombre)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(131, 131, 131)
-                        .addComponent(Imagen_Saludo, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(Imagen_Saludo, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(130, 130, 130)
+                        .addComponent(Boton_Confirmacion_Nombre)))
                 .addContainerGap(141, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -93,13 +81,9 @@ public class Ventana_Saludo extends javax.swing.JFrame {
                 .addComponent(Texto_Nombre)
                 .addGap(18, 18, 18)
                 .addComponent(Campo_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Texto_Apellido)
-                .addGap(12, 12, 12)
-                .addComponent(Campo_Apellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
+                .addGap(30, 30, 30)
                 .addComponent(Boton_Confirmacion_Nombre)
-                .addGap(19, 19, 19))
+                .addGap(75, 75, 75))
         );
 
         pack();
@@ -111,15 +95,7 @@ public class Ventana_Saludo extends javax.swing.JFrame {
     }//GEN-LAST:event_Campo_NombreActionPerformed
 
     private void Boton_Confirmacion_NombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_Confirmacion_NombreActionPerformed
-        String nombre_completo = "Hola " + Campo_Nombre.getText() + " " + Campo_Apellido.getText();
-        if (Campo_Nombre.getText().isEmpty() || Campo_Nombre.getText().length() < 5 || Campo_Nombre.getText().matches(nombre_completo) || comprobar_Numero(Campo_Nombre.getText())) {
-            JOptionPane.showMessageDialog(null, "Nombre  vacio, es menor de 5 caracteres o tiene numeros");
-            return;
-        }
-        if (Campo_Apellido.getText().isEmpty() || Campo_Apellido.getText().length() < 5 || comprobar_Numero(Campo_Apellido.getText())) {
-            JOptionPane.showMessageDialog(null, "Apellido vacio, es menor de 5 caracteres o tiene numeros");
-            return;
-        }
+        String nombre_completo = "Hola " + Campo_Nombre.getText();
         JOptionPane.showMessageDialog(null, nombre_completo);
     }//GEN-LAST:event_Boton_Confirmacion_NombreActionPerformed
 
@@ -131,10 +107,6 @@ public class Ventana_Saludo extends javax.swing.JFrame {
         }
         return false;
     }
-
-    private void Campo_ApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Campo_ApellidoActionPerformed
-
-    }//GEN-LAST:event_Campo_ApellidoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -173,10 +145,8 @@ public class Ventana_Saludo extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Boton_Confirmacion_Nombre;
-    private javax.swing.JTextField Campo_Apellido;
     private javax.swing.JTextField Campo_Nombre;
     private javax.swing.JLabel Imagen_Saludo;
-    private javax.swing.JLabel Texto_Apellido;
     private javax.swing.JLabel Texto_Nombre;
     // End of variables declaration//GEN-END:variables
 }
