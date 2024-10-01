@@ -37,6 +37,7 @@ public class Ventana_Saludo extends javax.swing.JFrame {
         Texto_Nombre = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Saludos!!");
 
         Boton_Confirmacion_Nombre.setText("Aceptar");
         Boton_Confirmacion_Nombre.addActionListener(new java.awt.event.ActionListener() {
@@ -89,7 +90,7 @@ public class Ventana_Saludo extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(Imagen_Saludo, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addComponent(Texto_Nombre)
                 .addGap(18, 18, 18)
                 .addComponent(Campo_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -103,6 +104,7 @@ public class Ventana_Saludo extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void Campo_NombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Campo_NombreActionPerformed
@@ -112,7 +114,7 @@ public class Ventana_Saludo extends javax.swing.JFrame {
 
     private void Boton_Confirmacion_NombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_Confirmacion_NombreActionPerformed
         String nombre_completo = "Hola " + Campo_Nombre.getText() + " " + Campo_Apellido.getText();
-        if (Campo_Nombre.getText().isEmpty() || Campo_Nombre.getText().length() < 5 || Campo_Nombre.getText().matches(nombre_completo) || comprobar_Numero(Campo_Nombre.getText())) {
+        if (Campo_Nombre.getText().isEmpty() || Campo_Nombre.getText().length() < 5 || comprobar_Numero(Campo_Nombre.getText())) {
             JOptionPane.showMessageDialog(null, "Nombre  vacio, es menor de 5 caracteres o tiene numeros");
             return;
         }
